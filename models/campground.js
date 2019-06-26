@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const yelpCampSchema = new Schema({
   name: { type: String, required: true },
   imageURL: { type: String, required: true },
+  description: {type: String},
   date: { type: Date, default: Date.now }
 });
 

@@ -7,10 +7,10 @@ router.route("/")
   .post(campgroundsController.create);
 
 // Matches with "/api/campgrounds/:id"
-// router
-//   .route("/:id")
-//   .get(campgroundsController.findById)
-//   .put(campgroundsController.update)
-//   .delete(campgroundsController.remove);
+router
+  .route("/:id")
+  .get(campgroundsController.findById)
+  .put(campgroundsController.update)
+  .delete(campgroundsController.remove);
 
 module.exports = router;
