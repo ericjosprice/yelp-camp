@@ -17,11 +17,25 @@ module.exports = {
         .catch( err => res.json(err))
     },
     create: function(req, res){
-        console.log(req.body)
-        db.Comment
-        .create(req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err))        
+        db.Campground.findOne({_id:req.params.id}).populate("comments").exec(
+            function(err, campground){
+                if(err){
+                    res.status(422).json(err)
+                }else {
+                // console.log("what is campground?: ")
+                // console.log(campground)
+                db.Comment
+                .create(req.body)
+                    .then(dbModel => {
+                        campground.comments.push(dbModel);
+                        campground.save();
+                        res.json(campground);
+                    })
+                    .catch(err => res.status(422).json(err))
+                }}
+        )
+        
+                
     },
     update: function(req, res) {
         db.Comment

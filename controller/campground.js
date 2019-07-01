@@ -19,8 +19,8 @@ module.exports = {
                 console.log(err);
             } else{
             res.json(dbModel);
-            console.log("what is my db returing: ");
-            console.log(dbModel);
+            // console.log("what is my db returing: ");
+            // console.log(dbModel);
             }
 
         })
