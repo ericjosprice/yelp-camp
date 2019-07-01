@@ -1,4 +1,5 @@
 module.exports = {
-    Campground: require("./campground")
+    Campground: require("./campground"),
+    Comment: require("./comment")
   };
   

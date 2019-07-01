@@ -13,4 +13,6 @@ router
   .put(campgroundsController.update)
   .delete(campgroundsController.remove);
 
+
+
 module.exports = router;
