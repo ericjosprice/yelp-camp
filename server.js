@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path")
+const path = require("path");
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 const app = express();
@@ -24,7 +24,7 @@ app.use(routes);
 
 //does heroku redirect requests to the react router dom with this code?
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
 // Connect to the Mongo DB
