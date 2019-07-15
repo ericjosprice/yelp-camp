@@ -12,7 +12,8 @@ const seeds = require('./seeds');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+console.log("NODE ARGUMENT---------------------");
+console.log(process.env.NODE_ENV);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -24,7 +25,7 @@ app.use(routes);
 
 //does heroku redirect requests to the react router dom with this code?
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // Connect to the Mongo DB
