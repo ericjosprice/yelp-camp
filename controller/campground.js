@@ -34,6 +34,8 @@ module.exports = {
             
     },
     update: function(req, res) {
+        console.log("this route was hit")
+        console.log(req.params.id)
         db.Campground
           .findOneAndUpdate({ _id: req.params.id }, req.body)
           .then(dbModel => res.json(dbModel))
