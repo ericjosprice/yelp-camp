@@ -33,8 +33,6 @@ class  oneCampground extends Component {
         description: res.data.description,
         comments:   res.data.comments })})
       .catch(err => console.log(err));
-
-      // do i need to get comments from the comments model or will it come by association?
   }
 
     // handle any changes to the input fields
@@ -105,6 +103,11 @@ class  oneCampground extends Component {
     deleteComment = id => {
         API.deleteComment(id)
         .catch(err => console.log(err))
+        //render comments
+        API.getcampground(this.props.match.params.id)
+      .then(res =>{ this.setState({ 
+        comments:   res.data.comments })})
+      .catch(err => console.log(err));
     }
 
     render(){
