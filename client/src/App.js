@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/pages/home";
+import Home from "./components/pages/home/home";
 import Campgrounds from "./components/pages/campgrounds";
 import AddCampgroundForm from "./components/pages/addCampgroundForm";
 import oneCampground from "./components/pages/oneCampground";

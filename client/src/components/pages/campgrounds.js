@@ -42,8 +42,8 @@ class Campgrounds extends Component {
                 <Nav />
                 <div className="container">
                     <Header>
-                    <h1>Welcome to YelpCamp</h1>
-                    <p>View hand-picked greater Austin area campgrounds</p>
+                    <h1><i class="fas fa-campground"></i>Welcome to YelpCamp</h1>
+                    <p>View hand-picked Greater Austin Area campgrounds</p>
                      
                     <Link to={'/campgrounds/new'}>
                         <button className="btn btn-info btn-lg">Add new campground</button>

@@ -154,8 +154,17 @@ class  oneCampground extends Component {
                                 </div>
                             </div>
                         </div>
+
                         <div className="row justify-content-between bg-secondary ">
+
                             <div className="col-md-4" style={{ margin:'20px 50px'}}>
+                                 <h4>Comments:</h4>
+                                </div>
+                            <div className="col-md-3" style={{ margin:'20px 50px'}}>
+                                 <button className="btn btn-primary btn-block" onClick={this.handleFormSubmit}> +Comment</button>
+                            </div>
+                            <div className="col-md-10" style={{ margin:'20px 50px'}}>
+
                                 <form>
                                     <div className="form-group">
                                         <textarea className="form-control"
@@ -167,13 +176,13 @@ class  oneCampground extends Component {
                                         />
                                     </div>
                                     <div className="form-group">
-                                        <button className="btn btn-primary btn-block" onClick={this.handleFormSubmit}>Comment</button>
+                                        
                                     </div>
                                 </form>
                             </div>
-                            <div className="col-md-6" >
+                            <div className="col-md-8" >
                                 <div style={{ margin:'20px 50px'}}>
-                                    <h4>Comments:</h4>
+                                    
                                     {this.state.comments.map(comment => ( <div>
                                         <p >-{comment.comment} <button 
                                             onClick={() => this.deleteComment(comment._id)}style={{background:"gray",border:"none", borderRadius:"50%", display:"inline"}}>X</button></p>

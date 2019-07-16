@@ -52,7 +52,7 @@ class AddCampgroundForm extends Component {
       <h1 style={{textAlign:"center"}}>Create a new campground</h1>
         <div className="row">
           
-            <div style={{width:'30%', margin:'30px auto'}}>
+            <div style={{width:'60%', margin:'30px auto'}}>
               <form>
                 {/* <p>Name: {this.state.name}</p> */}
                 <div className="formg-roup">
