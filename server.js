@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-//does heroku redirect requests to the react router dom with this code?
+// send all requests to the react index page so react router can handle rendering components
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
