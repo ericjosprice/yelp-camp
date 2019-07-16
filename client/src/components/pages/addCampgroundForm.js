@@ -36,8 +36,11 @@ class AddCampgroundForm extends Component {
       })
         .catch(err => console.log(err));
     }
-        alert(`Name: ${this.state.name}\nImage: ${this.state.imageURL}`);
+    this.redirectToTarget();
   };
+  redirectToTarget = () => {
+    this.props.history.push('/campgrounds')
+  }
 
 
 
