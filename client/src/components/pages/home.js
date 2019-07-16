@@ -12,7 +12,7 @@ function Home() {
         <div>
             <Nav />
             <div className="container" id="landingHeader">
-            <h1>Welcome to the yelp camp home page</h1>
+            <h1>Welcome to the yelp camp</h1>
             <a href="/campgrounds">
             <button className=" btn btn-info">View all Campgrounds</button>
             </a>

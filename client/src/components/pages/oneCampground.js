@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import Nav from "../nav";
 // import Modal from "../modal"
-import Header from "../header"
-import Row from "../row"
 import {BrowserRouter as Route, Link } from "react-router-dom";
 import {Button, Modal} from 'react-bootstrap';
 import API from "../../utils/API";
-import Campgrounds from "./campgrounds";
 
 class  oneCampground extends Component {
 
